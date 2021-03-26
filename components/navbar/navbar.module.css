@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.link:hover {
+  opacity: 50%;
+  transition: 0.25s;
+  text-decoration: underline;
+}
