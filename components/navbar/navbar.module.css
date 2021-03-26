@@ -1,6 +1,8 @@
 .navbar {
   display: flex;
   justify-content: space-around;
+  background-color: aliceblue;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbarLinks {
@@ -10,7 +12,7 @@
   width: 200px;
   list-style-type: none;
   padding: 0;
-  font-size: 18px;
+  font-size: 1.2em;
 }
 
 .link:hover {
