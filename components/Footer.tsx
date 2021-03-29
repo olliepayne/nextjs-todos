@@ -15,7 +15,7 @@ const Footer = () => {
           }
         `}
       </style>
-      <p>Made with Next.js and TypeScript, <a className="githubLink" href="#">GitHub Repo</a></p>
+      <p>Made with Next.js and TypeScript, <a className="githubLink" href="https://github.com/olliepayne/nextjs-todos" target="blank">GitHub Repo</a></p>
     </footer>
   )
 }

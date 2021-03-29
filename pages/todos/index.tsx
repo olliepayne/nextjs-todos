@@ -24,8 +24,7 @@ const Todos = ({ todos }) => {
         <ul className={styles.todoList}>
           {todos.map((todo, index) => (
             <li key={todo.id}>
-              <h4>{`${index + 1}. ${todo.title}`}</h4>
-              <p>{todo.completed}</p>
+              <p>{`${todo.id}. ${todo.title}: ${todo.completed ? 'completed!' : 'not completed'}`}</p>
             </li>
           ))}
         </ul>
