@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import '../styles/globals.css'
+import data from '../public/books.json'
 
 function MyApp({ Component, pageProps }) {
   return (

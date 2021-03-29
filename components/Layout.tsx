@@ -1,16 +1,18 @@
+import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import styles from '../styles/Layout.module.css'
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   return (
-    <>
-    <Navbar />
-      <div className={styles.container}>
-        <main className={styles.main}>
-
-        </main>
-      </div>
-    </>
+    <div>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <Navbar />
+      {children}
+      <Footer />
+    </div>
   )
 }
 
