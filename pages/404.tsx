@@ -1,14 +1,22 @@
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
 const NotFound = () => {
   const router = useRouter()
+
+  const timeoutDelay = 3000
+  const [countdown, setCountdown] = useState(timeoutDelay / 1000)
     
   useEffect(() => {
+    setInterval(() => {
+      const val = countdown - 1
+      setCountdown(val)
+    }, 1000)
+
     setTimeout(() => {
       router.push('/')
-    }, 3000)
+    }, timeoutDelay)
   }, [])
 
   return (
@@ -30,6 +38,7 @@ const NotFound = () => {
       </style>
       <h1>404 Error</h1>
       <h2>That page cannot be found.</h2>
+      <p>Redirecting in {countdown}...</p>
       <p>Go back to the <Link href="/"><a className="homepageLink">Homepage</a></Link></p>
     </div>
   )
