@@ -5,18 +5,24 @@ import { useRouter } from 'next/router'
 const NotFound = () => {
   const router = useRouter()
 
-  const timeoutDelay = 3000
-  const [countdown, setCountdown] = useState(timeoutDelay / 1000)
+  const redirectDelay = 3000
+  const [countdown, setCountdown] = useState(redirectDelay / 1000)
     
-  useEffect(() => {
+  const handleRedirect = () => {
+    let newCountdown = countdown
     setInterval(() => {
-      const val = countdown - 1
-      setCountdown(val)
-    }, 1000)
+      if(newCountdown === 0) {
+        router.push('/')
+        return
+      }
 
-    setTimeout(() => {
-      router.push('/')
-    }, timeoutDelay)
+      newCountdown--
+      setCountdown(newCountdown)
+    }, 1000)
+  }
+
+  useEffect(() => {
+    handleRedirect()
   }, [])
 
   return (
