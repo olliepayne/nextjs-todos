@@ -11,7 +11,7 @@ const NotFound = () => {
   const handleRedirect = () => {
     let newCountdown = countdown
     setInterval(() => {
-      if(newCountdown === 0) {
+      if(newCountdown === 1) {
         router.push('/')
         return
       }

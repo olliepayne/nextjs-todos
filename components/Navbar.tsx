@@ -4,13 +4,10 @@ import styles from '../styles/Navbar.module.css'
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <Link href="/"><a className={styles.link}><h1>NextJS / Typescript Notes</h1></a></Link>
+      <Link href="/"><a className={styles.link}><h1>Next.js To-Dos</h1></a></Link>
       <ul className={styles.navbarLinks}>
         <li className={styles.link}>
-          <Link href="/notes"><a>Notes</a></Link>
-        </li>
-        <li className={styles.link}>
-          <Link href="/notes/new-note"><a>New Note</a></Link>
+          <Link href="/todos"><a>To-Do List</a></Link>
         </li>
       </ul>
     </nav>

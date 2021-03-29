@@ -6,10 +6,16 @@ const Footer = () => {
           footer {
             display: flex;
             justify-content: center;
+            font-style: italic;
+          }
+          
+          .githubLink {
+            font-weight: bold;
+            text-decoration: underline;
           }
         `}
       </style>
-      <p>Made with Next.js and TypeScript, <a href="#">GitHub Repo</a></p>
+      <p>Made with Next.js and TypeScript, <a className="githubLink" href="#">GitHub Repo</a></p>
     </footer>
   )
 }
