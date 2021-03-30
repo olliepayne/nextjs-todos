@@ -7,12 +7,12 @@ export default function Home() {
       <Head>
         <title>Next.js To-Dos | Home</title>
         <meta name="keywords" content="Next.js, TypeScript" />
-        <meta name="description" content="Practice project emphasizing usage of Next.js and TypeScript" />
+        <meta name="description" content="Practice project emphasizing usage of Next.js. Also utilizes TypeScript." />
         <meta name="author" content="Ollie Payne" />
       </Head>
       <div className={styles.content}>
         <h1>Homepage</h1>
-        <p>Practice project emphasizing usage of Next.js and TypeScript</p>
+        <p>Practice project emphasizing usage of Next.js. Also utilizes TypeScript. API calls are made to JSON placeholder.</p>
       </div>
     </>
   )

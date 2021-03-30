@@ -13,6 +13,7 @@ const NotFound = () => {
     setInterval(() => {
       if(newCountdown === 1) {
         router.push('/')
+        clearInterval()
         return
       }
 
@@ -23,6 +24,10 @@ const NotFound = () => {
 
   useEffect(() => {
     handleRedirect()
+
+    return function cleanup() {
+
+    }
   }, [])
 
   return (
